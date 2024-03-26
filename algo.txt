@@ -1,0 +1,10 @@
+
+
+add remove and update read/not read buttons 
+
+    - buttons need to be labeled (abc-1, abc-2) etc
+    - functions attached need to target them specifically 
+
+make it so you cannot enter the same book in twice (based on title and author)
+
+css to make it a little prettier 

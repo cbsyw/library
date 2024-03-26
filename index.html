@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<header>
+    <div id="header">
+        <h2>library</h2>
+    </div>
+</header>
+
+<body>
+
+    
+    <div class="wrapper">
+        <div class="content">
+            
+            log your book progress
+
+            <div class="button-section">
+                <button id="addBook">+ add book</button>
+            </div>
+           
+            <!-- Your dynamic content here -->
+
+
+            <dialog id="favDialog">
+                <form action="get">
+                    <div class="form-row">
+                        <label for="book">title</label>
+                        <input class="required" type="text" name="book" id="book" >
+                    </div>
+                    <div class="form-row">
+                        <label for="author">author</label>
+                        <input class="required" type="text" name="author" id="author">
+                    </div>
+                    <div class="form-row">
+                        <label for="pages">pages</label>
+                        <input class="required" type="number" name="pages" id="pages" onkeypress="return /[0-9]/i.test(event.key)" min="1">
+                    </div>
+                    <div class="form-row">
+                        <label for="status">did u read it?</label>
+                        <select name="status" id="status">
+                            <option value="read">read</option>
+                            <option value="not read">not read</option>
+                        </select>
+                    </div>
+
+                    
+                    <button id="cancel" value="cancel" formmethod="dialog">Cancel</button>
+                    <button id="submit" value="default">Confirm</button>
+                </form>
+            </dialog> 
+
+            <div id="grid">
+
+            </div>
+
+        </div>
+    <footer>
+        <div id="footer">
+            <h4>
+                © 2024 cbsyw
+            </h4>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+<script src="script.js"></script>
