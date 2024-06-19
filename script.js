@@ -1,14 +1,16 @@
 
-function createBook(title, author, pages, status) {
-    return {
-        title: title,
-        author: author,
-        pages: pages,
-        status: status,
-        info: function() {
-            return `${this.title} by ${this.author}, ${this.pages} pages, ${this.status}`;
-        }
-    };
+
+class Book{
+    constructor(title,author,pages,status){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.status = status;
+    }
+
+    info(){
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.status}`; 
+    }
 }
 
 const myLibrary = [];
@@ -23,7 +25,7 @@ function handleBook() {
     const pages = document.getElementById('pages').value;
     const status = document.getElementById('status').value;
 
-    const newBook = createBook(title, author, pages, status);
+    const newBook = new Book(title, author, pages, status);
 
     if (myLibrary.includes(newBook)) {
         form = document.getElementById('favDialog');
